@@ -56,3 +56,11 @@
   margin-top: 10px;
   font-size: 18px;
 }
+.logic-textarea {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}

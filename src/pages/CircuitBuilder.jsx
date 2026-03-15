@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./CircuitBuilder.css";
 
 function CircuitBuilder() {
 
   const [components, setComponents] = useState([]);
   const [voltage, setVoltage] = useState(5);
+  const [logicText, setLogicText] = useState("");
 
   const resistance = 10;
 
@@ -16,13 +17,30 @@ function CircuitBuilder() {
 
   const bulbBrightness = Math.min(1, voltage / 10);
 
+  // Update textarea logic
+  useEffect(() => {
+    const text = `
+Circuit Components: ${components.join(", ") || "None"}
+
+Voltage: ${voltage} V
+Resistance: ${resistance} Ω
+Current: ${current} A
+
+Ohm's Law:
+Current = Voltage / Resistance
+
+Bulb brightness increases when voltage increases.
+`;
+    setLogicText(text);
+  }, [components, voltage, current]);
+
   return (
 
     <div className="container">
 
       <h1 className="title">Circuit Builder (Ohm’s Law)</h1>
 
-      <h2 className="section-title">Drag Components</h2>
+      <h2 className="section-title">Add Components</h2>
 
       <div className="button-group">
         <button onClick={() => addComponent("battery")}>Battery</button>
@@ -82,6 +100,15 @@ function CircuitBuilder() {
       <p className="info">
         Bulb Brightness increases when voltage increases.
       </p>
+
+      <h2 className="section-title">Circuit Logic</h2>
+
+      <textarea
+        className="logic-textarea"
+        value={logicText}
+        onChange={(e) => setLogicText(e.target.value)}
+        rows="8"
+      />
 
     </div>
 
