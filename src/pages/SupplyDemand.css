@@ -4,31 +4,45 @@
   font-family: Arial, sans-serif;
 }
 
+/* Title */
+
 .title {
   font-size: 32px;
   margin-bottom: 20px;
 }
+
+/* Section */
 
 .section-title {
   margin-top: 20px;
   font-size: 22px;
 }
 
+/* Slider */
+
 .slider {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   margin-top: 10px;
 }
+
+/* Text values */
 
 .value-text {
   font-size: 18px;
   margin-top: 5px;
 }
 
+/* Chart */
+
 .chart-container {
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   margin: auto;
   margin-top: 20px;
 }
+
+/* Price */
 
 .price {
   margin-top: 20px;
@@ -36,12 +50,72 @@
   font-weight: bold;
 }
 
+/* Icon */
+
 .icon {
   font-size: 50px;
   margin-top: 10px;
 }
 
+/* Info text */
+
 .info-text {
   margin-top: 10px;
   font-size: 16px;
+}
+
+/* Tablet */
+
+@media (max-width:768px){
+
+  .title{
+    font-size:26px;
+  }
+
+  .section-title{
+    font-size:20px;
+  }
+
+  .value-text{
+    font-size:16px;
+  }
+
+  .price{
+    font-size:20px;
+  }
+
+}
+
+/* Mobile */
+
+@media (max-width:480px){
+
+  .container{
+    padding:15px;
+  }
+
+  .title{
+    font-size:22px;
+  }
+
+  .section-title{
+    font-size:18px;
+  }
+
+  .value-text{
+    font-size:15px;
+  }
+
+  .price{
+    font-size:18px;
+  }
+
+  .icon{
+    font-size:40px;
+  }
+
+  .info-text{
+    font-size:14px;
+  }
+
 }

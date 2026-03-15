@@ -1,13 +1,24 @@
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 import "./Navbar.css";
 
 function Navbar() {
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav className="navbar">
 
       <div className="logo">Simulation Lab</div>
 
-      <ul className="nav-links">
+      <div 
+        className="menu-icon"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        ☰
+      </div>
+
+      <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
 
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/projectile">Projectile</NavLink></li>

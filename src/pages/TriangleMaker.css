@@ -4,25 +4,81 @@
   font-family: Arial, sans-serif;
 }
 
+/* Title */
+
 .title {
   font-size: 32px;
   margin-bottom: 20px;
 }
 
+/* Canvas */
+
 .canvas {
   border: 2px solid black;
   cursor: pointer;
   margin-top: 10px;
+
+  width: 100%;
+  max-width: 600px;
+  height: auto;
 }
+
+/* Result box */
 
 .result-box {
   margin-top: 20px;
   font-size: 18px;
 }
 
+/* Angle sum */
+
 .angle-sum {
   margin-top: 10px;
   font-size: 20px;
   font-weight: bold;
   color: #0077ff;
+}
+
+/* Tablet */
+
+@media (max-width:768px){
+
+  .title{
+    font-size:26px;
+  }
+
+  .result-box{
+    font-size:16px;
+  }
+
+  .angle-sum{
+    font-size:18px;
+  }
+
+}
+
+/* Mobile */
+
+@media (max-width:480px){
+
+  .container{
+    padding:15px;
+  }
+
+  .title{
+    font-size:22px;
+  }
+
+  .result-box{
+    font-size:15px;
+  }
+
+  .angle-sum{
+    font-size:16px;
+  }
+
+  .canvas{
+    max-width:100%;
+  }
+
 }

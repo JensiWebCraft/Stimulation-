@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
+import "./SolarSystem.css";
 
 function SolarSystem() {
 
@@ -40,7 +41,7 @@ function SolarSystem() {
         const x = centerX + Math.cos(angles.current[i]) * planet.distance;
         const y = centerY + Math.sin(angles.current[i]) * planet.distance;
 
-        // Orbit path
+        // Orbit
         ctx.beginPath();
         ctx.arc(centerX, centerY, planet.distance, 0, Math.PI * 2);
         ctx.strokeStyle = "#ccc";
@@ -85,16 +86,16 @@ function SolarSystem() {
 
   return (
 
-    <div style={{ textAlign: "center", padding: "20px" }}>
+    <div className="container">
 
-      <h1>Solar System Scale Explorer</h1>
+      <h1 className="title">Solar System Scale Explorer</h1>
 
       <canvas
         ref={canvasRef}
         width={700}
         height={400}
         onClick={handleClick}
-        style={{ border: "2px solid black" }}
+        className="canvas"
       />
 
       <h2>Time Warp</h2>
@@ -104,14 +105,17 @@ function SolarSystem() {
         min="1"
         max="10"
         value={speed}
+        className="slider"
         onChange={(e) => setSpeed(Number(e.target.value))}
       />
 
-      <p>Speed Multiplier: {speed}x</p>
+      <p className="speed-text">
+        Speed Multiplier: {speed}x
+      </p>
 
       {selected && (
 
-        <div style={{ marginTop: "20px" }}>
+        <div className="planet-info">
 
           <h2>{selected.name}</h2>
 
