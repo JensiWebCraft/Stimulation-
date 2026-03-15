@@ -1,77 +1,112 @@
+/* Main Container */
 .container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 35px;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   text-align: center;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
+/* Title */
 .title {
   font-size: 32px;
-  margin-bottom: 20px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #2c3e50;
 }
 
+/* Toggle Buttons */
 .toggle-buttons {
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
 }
 
 .toggle-buttons button {
-  margin: 5px;
-  padding: 8px 18px;
+  padding: 10px 20px;
   border: none;
-  background-color: #0077ff;
+  border-radius: 8px;
+  background: linear-gradient(45deg,#36d1dc,#5b86e5);
   color: white;
-  border-radius: 6px;
+  font-size: 15px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .toggle-buttons button:hover {
-  background-color: #005edb;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.25);
 }
 
+/* Difference Button */
 .diff-btn {
   margin-bottom: 20px;
-  padding: 8px 18px;
+  padding: 10px 25px;
   border: none;
-  background-color: #28a745;
+  border-radius: 8px;
+  background: linear-gradient(45deg,#ff7e5f,#feb47b);
   color: white;
-  border-radius: 6px;
+  font-size: 15px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .diff-btn:hover {
-  background-color: #1e7e34;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.25);
 }
 
+/* Organelles Container */
 .organelles-container {
   display: flex;
-  justify-content: center;
-  gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
 }
 
+/* Organelle Box */
 .organelle-box {
-  width: 150px;
-  padding: 15px;
-  border: 2px solid black;
+  padding: 15px 20px;
   border-radius: 10px;
-  background: #f5f5f5;
+  background: #f4f6fb;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   cursor: pointer;
+  font-weight: 500;
   transition: 0.3s;
 }
 
 .organelle-box:hover {
   transform: scale(1.05);
-  background: #e9e9e9;
+  background: #e9f0ff;
 }
 
+/* Highlight for Plant Differences */
 .highlight {
-  background: #90ee90;
+  background: #ffeaa7;
+  border: 2px solid #fdcb6e;
 }
 
+/* Info Box */
 .info-box {
-  margin-top: 20px;
-  padding: 10px;
-  border: 1px solid black;
-  display: inline-block;
-  border-radius: 6px;
-  background: #fafafa;
+  margin-top: 25px;
+  padding: 18px;
+  border-radius: 10px;
+  background: #f7f9fc;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.info-box h3 {
+  margin-bottom: 5px;
+  color: #34495e;
+}
+
+.info-box p {
+  margin: 0;
+  color: #555;
 }

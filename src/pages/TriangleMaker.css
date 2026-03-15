@@ -1,61 +1,66 @@
-.triangle-container{
-  text-align:center;
-  padding:20px;
-  font-family:Arial, sans-serif;
+/* Container */
+.triangle-container {
+  max-width: 750px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
 }
 
-.triangle-title{
-  font-size:32px;
-  margin-bottom:20px;
+/* Title */
+.triangle-title {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #2c3e50;
 }
 
-.triangle-canvas{
-  border:2px solid black;
-  cursor:pointer;
-  max-width:100%;
+/* Canvas (IMPORTANT: do not change width/height) */
+.triangle-canvas {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background: #fafafa;
+  cursor: pointer;
 }
 
-.triangle-result{
-  margin-top:20px;
-  font-size:18px;
+/* Result box */
+.triangle-result {
+  margin-top: 20px;
+  padding: 18px;
+  border-radius: 10px;
+  background: #f4f6fb;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
-.angle-sum{
-  margin-top:10px;
-  font-size:22px;
-  font-weight:bold;
-  color:#0077ff;
+/* Text */
+.triangle-result h2 {
+  color: #34495e;
+  margin-bottom: 10px;
 }
 
-/* Tablet */
+.triangle-result p {
+  margin: 4px 0;
+  font-size: 16px;
+}
 
-@media (max-width:768px){
+.angle-sum {
+  margin-top: 8px;
+  color: #e74c3c;
+  font-weight: 600;
+}
 
-  .triangle-title{
-    font-size:26px;
+/* Responsive (safe) */
+@media (max-width: 768px) {
+
+  .triangle-container {
+    margin: 20px;
+    padding: 20px;
   }
 
-  .triangle-result{
-    font-size:16px;
-  }
-
-}
-
-/* Mobile */
-
-@media (max-width:480px){
-
-  .triangle-title{
-    font-size:22px;
-  }
-
-  .triangle-canvas{
-    width:100%;
-    height:auto;
-  }
-
-  .triangle-result{
-    font-size:14px;
+  .triangle-title {
+    font-size: 24px;
   }
 
 }

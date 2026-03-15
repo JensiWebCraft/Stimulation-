@@ -13,36 +13,39 @@ import StatesOfMatter from "./pages/StatesOfMatter";
 import SolarSystem from "./pages/SolarSystem";
 import LogicGateSandbox from "./pages/LogicGateSandbox";
 import SupplyDemand from "./pages/SupplyDemand";
+import "./index.css";
 
 function App() {
 
-return (
+  return (
+    <BrowserRouter>
 
-<BrowserRouter>
+      <Navbar />
 
-<Navbar/>
+      {/* Main page content */}
+      <div className="main-content">
 
-<Routes>
+        <Routes>
 
-<Route path="/" element={<Home/>}/>
+          <Route path="/" element={<Home />} />
 
-<Route path="/projectile" element={<ProjectileSimulation/>}/>
-<Route path="/cell" element={<CellInspector/>}/>
-<Route path="/chemical" element={<ChemicalBalance/>}/>
-<Route path="/pulley" element={<PulleySimulation/>}/>
-<Route path="/triangle" element={<TriangleMaker/>}/>
-<Route path="/circuit" element={<CircuitBuilder/>}/>
-<Route path="/states" element={<StatesOfMatter/>}/>
-<Route path="/solar" element={<SolarSystem/>}/>
-<Route path="/logic" element={<LogicGateSandbox/>}/>
-<Route path="/market" element={<SupplyDemand/>}/>
+          <Route path="/projectile" element={<ProjectileSimulation />} />
+          <Route path="/cell" element={<CellInspector />} />
+          <Route path="/chemical" element={<ChemicalBalance />} />
+          <Route path="/pulley" element={<PulleySimulation />} />
+          <Route path="/triangle" element={<TriangleMaker />} />
+          <Route path="/circuit" element={<CircuitBuilder />} />
+          <Route path="/states" element={<StatesOfMatter />} />
+          <Route path="/solar" element={<SolarSystem />} />
+          <Route path="/logic" element={<LogicGateSandbox />} />
+          <Route path="/market" element={<SupplyDemand />} />
 
-</Routes>
+        </Routes>
 
-</BrowserRouter>
+      </div>
 
-)
-
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

@@ -1,56 +1,138 @@
+/* Container */
 .container {
+  max-width: 750px;
+  margin: 40px auto;
+  padding: 35px;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   text-align: center;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
+/* Title */
 .title {
   font-size: 32px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  color: #2c3e50;
 }
 
+/* Section Titles */
 .section-title {
-  margin-top: 20px;
+  margin-top: 25px;
   font-size: 22px;
+  color: #34495e;
 }
 
+/* Molecule Row */
 .molecule-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
   margin: 10px 0;
   font-size: 18px;
 }
 
+/* Buttons */
 .btn {
-  padding: 5px 12px;
-  margin: 0 10px;
-  font-size: 16px;
+  padding: 6px 14px;
+  font-size: 18px;
   border: none;
-  background-color: #0077ff;
+  border-radius: 6px;
+  background: linear-gradient(45deg,#36d1dc,#5b86e5);
   color: white;
-  border-radius: 4px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .btn:hover {
-  background-color: #005edb;
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
+/* Atom Count Box */
 .atom-count {
-  margin-top: 20px;
-  font-size: 18px;
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #f4f6fb;
+  font-size: 16px;
 }
 
+/* Balance Result */
 .balance-box {
   margin-top: 20px;
-  padding: 20px;
+  padding: 15px;
+  border-radius: 10px;
   font-size: 20px;
-  font-weight: bold;
-  border-radius: 8px;
+  font-weight: 600;
 }
 
+/* Balanced State */
 .balanced {
-  background-color: lightgreen;
+  background: #d4edda;
+  color: #155724;
 }
 
+/* Not Balanced State */
 .not-balanced {
-  background-color: lightcoral;
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* -------------------- */
+/* Responsive Design */
+/* -------------------- */
+
+@media (max-width: 768px) {
+
+  .container {
+    margin: 20px;
+    padding: 25px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .molecule-row {
+    font-size: 16px;
+    gap: 10px;
+  }
+
+  .btn {
+    padding: 6px 12px;
+    font-size: 16px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .container {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .molecule-row {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .atom-count {
+    font-size: 14px;
+  }
+
+  .balance-box {
+    font-size: 18px;
+  }
+
 }
