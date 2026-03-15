@@ -4,14 +4,17 @@ import "./StatesOfMatter.css";
 function StatesOfMatter() {
 
   const canvasRef = useRef(null);
+  const animationRef = useRef(null);
+
   const [temperature, setTemperature] = useState(20);
+
   const particles = useRef([]);
   const particleCount = 40;
 
+  // Create particles
   useEffect(() => {
 
     const canvas = canvasRef.current;
-
     particles.current = [];
 
     for (let i = 0; i < particleCount; i++) {
@@ -25,6 +28,7 @@ function StatesOfMatter() {
 
   }, []);
 
+  // Animation
   useEffect(() => {
 
     const canvas = canvasRef.current;
@@ -51,14 +55,18 @@ function StatesOfMatter() {
 
       });
 
-      requestAnimationFrame(animate);
+      animationRef.current = requestAnimationFrame(animate);
 
     };
 
     animate();
 
+    // cleanup old animation
+    return () => cancelAnimationFrame(animationRef.current);
+
   }, [temperature]);
 
+  // State detection
   let state = "Solid";
 
   if (temperature > 40 && temperature <= 70) state = "Liquid";

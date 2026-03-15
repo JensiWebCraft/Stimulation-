@@ -4,6 +4,8 @@ import "./SolarSystem.css";
 function SolarSystem() {
 
   const canvasRef = useRef(null);
+  const animationRef = useRef(null);
+
   const [speed, setSpeed] = useState(1);
   const [selected, setSelected] = useState(null);
 
@@ -58,11 +60,14 @@ function SolarSystem() {
 
       });
 
-      requestAnimationFrame(animate);
+      animationRef.current = requestAnimationFrame(animate);
 
     };
 
     animate();
+
+    // Stop previous animation
+    return () => cancelAnimationFrame(animationRef.current);
 
   }, [speed]);
 

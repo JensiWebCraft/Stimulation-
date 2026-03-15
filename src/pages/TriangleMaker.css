@@ -1,58 +1,42 @@
-.container {
-  text-align: center;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+.triangle-container{
+  text-align:center;
+  padding:20px;
+  font-family:Arial, sans-serif;
 }
 
-/* Title */
-
-.title {
-  font-size: 32px;
-  margin-bottom: 20px;
+.triangle-title{
+  font-size:32px;
+  margin-bottom:20px;
 }
 
-/* Canvas */
-
-.canvas {
-  border: 2px solid black;
-  cursor: pointer;
-  margin-top: 10px;
-
-  width: 100%;
-  max-width: 600px;
-  height: auto;
+.triangle-canvas{
+  border:2px solid black;
+  cursor:pointer;
+  max-width:100%;
 }
 
-/* Result box */
-
-.result-box {
-  margin-top: 20px;
-  font-size: 18px;
+.triangle-result{
+  margin-top:20px;
+  font-size:18px;
 }
 
-/* Angle sum */
-
-.angle-sum {
-  margin-top: 10px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #0077ff;
+.angle-sum{
+  margin-top:10px;
+  font-size:22px;
+  font-weight:bold;
+  color:#0077ff;
 }
 
 /* Tablet */
 
 @media (max-width:768px){
 
-  .title{
+  .triangle-title{
     font-size:26px;
   }
 
-  .result-box{
+  .triangle-result{
     font-size:16px;
-  }
-
-  .angle-sum{
-    font-size:18px;
   }
 
 }
@@ -61,24 +45,17 @@
 
 @media (max-width:480px){
 
-  .container{
-    padding:15px;
-  }
-
-  .title{
+  .triangle-title{
     font-size:22px;
   }
 
-  .result-box{
-    font-size:15px;
+  .triangle-canvas{
+    width:100%;
+    height:auto;
   }
 
-  .angle-sum{
-    font-size:16px;
-  }
-
-  .canvas{
-    max-width:100%;
+  .triangle-result{
+    font-size:14px;
   }
 
 }

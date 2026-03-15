@@ -22,18 +22,14 @@ function TriangleMaker() {
     const b = distance(points[0], points[2]);
     const c = distance(points[0], points[1]);
 
-    if (Math.abs(a - b) < 5 && Math.abs(b - c) < 5) {
-      return "Equilateral";
-    }
-
-    if (Math.abs(a - b) < 5 || Math.abs(b - c) < 5 || Math.abs(a - c) < 5) {
-      return "Isosceles";
-    }
+    if (Math.abs(a - b) < 5 && Math.abs(b - c) < 5) return "Equilateral";
+    if (Math.abs(a - b) < 5 || Math.abs(b - c) < 5 || Math.abs(a - c) < 5) return "Isosceles";
 
     return "Scalene";
   };
 
   const getAngle = (A, B, C) => {
+
     const AB = distance(A, B);
     const BC = distance(B, C);
     const AC = distance(A, C);
@@ -59,16 +55,19 @@ function TriangleMaker() {
     ctx.closePath();
 
     ctx.strokeStyle = "black";
+    ctx.lineWidth = 2;
     ctx.stroke();
 
     points.forEach((p, i) => {
+
       ctx.beginPath();
       ctx.arc(p.x, p.y, 8, 0, Math.PI * 2);
-      ctx.fillStyle = "red";
+      ctx.fillStyle = "#ff3b3b";
       ctx.fill();
 
       ctx.fillStyle = "black";
       ctx.fillText(["A", "B", "C"][i], p.x + 10, p.y);
+
     });
 
   }, [points]);
@@ -108,21 +107,21 @@ function TriangleMaker() {
 
   return (
 
-    <div className="container">
+    <div className="triangle-container">
 
-      <h1 className="title">Triangle Maker & Classifier</h1>
+      <h1 className="triangle-title">Triangle Maker & Classifier</h1>
 
       <canvas
         ref={canvasRef}
         width={600}
         height={350}
-        className="canvas"
+        className="triangle-canvas"
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
       />
 
-      <div className="result-box">
+      <div className="triangle-result">
 
         <h2>Triangle Type: {classifyTriangle()}</h2>
 
@@ -139,7 +138,6 @@ function TriangleMaker() {
     </div>
 
   );
-
 }
 
 export default TriangleMaker;
