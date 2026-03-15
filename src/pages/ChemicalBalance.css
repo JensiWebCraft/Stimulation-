@@ -1,0 +1,56 @@
+.container {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  margin-top: 20px;
+  font-size: 22px;
+}
+
+.molecule-row {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.btn {
+  padding: 5px 12px;
+  margin: 0 10px;
+  font-size: 16px;
+  border: none;
+  background-color: #0077ff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #005edb;
+}
+
+.atom-count {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.balance-box {
+  margin-top: 20px;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.balanced {
+  background-color: lightgreen;
+}
+
+.not-balanced {
+  background-color: lightcoral;
+}

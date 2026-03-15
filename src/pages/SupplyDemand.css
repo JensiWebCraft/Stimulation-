@@ -1,0 +1,47 @@
+.container {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  margin-top: 20px;
+  font-size: 22px;
+}
+
+.slider {
+  width: 300px;
+  margin-top: 10px;
+}
+
+.value-text {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.chart-container {
+  width: 600px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.price {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.icon {
+  font-size: 50px;
+  margin-top: 10px;
+}
+
+.info-text {
+  margin-top: 10px;
+  font-size: 16px;
+}

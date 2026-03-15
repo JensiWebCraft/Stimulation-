@@ -1,0 +1,54 @@
+.container {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.control-box {
+  margin: 20px;
+}
+
+.slider {
+  width: 300px;
+  margin-top: 10px;
+}
+
+.fire-btn {
+  padding: 10px 25px;
+  font-size: 16px;
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.fire-btn:hover {
+  background-color: #005edb;
+}
+
+.canvas-box {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.canvas {
+  border: 2px solid black;
+  background: #f5f5f5;
+}
+
+.result-box {
+  margin-top: 20px;
+  background: #f1f1f1;
+  padding: 15px;
+  border-radius: 8px;
+  display: inline-block;
+}
